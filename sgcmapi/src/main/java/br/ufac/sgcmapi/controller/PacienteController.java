@@ -28,7 +28,7 @@ public class PacienteController implements ICrudController<Paciente> {
     }
 
     @Override
-    @GetMapping("/consultara")
+    @GetMapping("/consultar")
     public ResponseEntity<List<Paciente>> consultar(@RequestParam(required = false) String termoBusca) {
         var registros = servico.consultar(termoBusca);
         return ResponseEntity.ok(registros);
